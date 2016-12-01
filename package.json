@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run copy && budo src/app.js --open --dir=dist --live --pushstate -- ",
-    "copy": "mkdir -p dist && cp src/index.html dist/ && cp -r src/assets dist/assets",
+    "copy": "rm -rf dist && mkdir -p dist && cp src/index.html dist/ && cp -r src/assets dist/assets",
     "build": "npm run copy && browserify src/app.js > dist/app.js"
   },
   "browserify": {
