@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run copy && budo src/app.js --open --dir=dist --live --pushstate -- ",
     "copy": "rm -rf dist && mkdir -p dist && cp src/index.html dist/ && cp -r src/assets dist/assets",
-    "build": "npm run copy && browserify src/app.js > dist/app.js"
+    "build": "npm run copy && browserify src/app.js > dist/app.js",
+    "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "browserify": {
     "transform": [
