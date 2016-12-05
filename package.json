@@ -27,7 +27,7 @@
     "url": "git+https://github.com/kamicut/cedar-leaders.git"
   },
   "author": "",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kamicut/cedar-leaders/issues"
   },
