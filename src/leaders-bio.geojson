@@ -1,0 +1,110 @@
+[
+ {
+   "id": 1,
+   "name": "Zeina Saab",
+   "category": "Anti-Fanaticism",
+   "bio": "Founder of The Nawaya Network, an NGO that empowers disadvantaged youth by connecting them with resources to strengthen their talents, employability, and entrepreneurial potential",
+   "quote": "Unlocking the hidden potential of marginalized youth",
+   "region": "Beirut and a national vision for 2017",
+   "contact": "zsaab@nawaya.org"
+ },
+ {
+   "id": 2,
+   "name": "Tala Khlat",
+   "category": "Anti-Sectarianism",
+   "bio": "Works in diversified fields such as education, social protection, drug awareness and youth integration. In 2013, she founded “Min ila” in order to innovate around the civic education topic in formal and non formal education.",
+   "quote": "I am the first beneficiary of the projects that I develop in Min ila",
+   "region": "Beirut and \"connecting regions\"",
+   "contact": "tkhlat@minila.org"
+ },
+ {
+   "id": 3,
+   "name": "Layal Jebran and Mahmoud Zalt ",
+   "category": "Anti-Fanaticism",
+   "bio": "Co-Founder of “Mobarmej”, online programming in Arabic to empower the community, through free coaching to integrate them.",
+   "quote": "We have been all a minority in our lives, at some point, we’ve been marginalized… silence is not to be an option in our life!",
+   "region": "Beirut",
+   "contact": "Me@layaljebran.com, 03933234"
+ },
+ {
+   "id": 4,
+   "name": "Assad Chaftari",
+   "category": "Anti-Fanaticism",
+   "bio": "Assad Chaftari is an ex-civil war fighter and founder of Fighter for Peace. He tells people his story and the lessons he learned from the civil war. Most importantly he discourages violence because as he learned, it leads nowhere.",
+   "quote": "The difference between dream and vision is action. ",
+   "region": "Lebanon, wherever he is needed, he will show up.",
+   "contact": "-"
+ },
+ {
+   "id": 5,
+   "name": "Vanessa Bassil",
+   "category": "Anti-Fanaticism (dismanting cultural and structural violence)",
+   "bio": "Vanessa Bassil is the founder of MAP. She believes that media plays an essential role in peace building and conflict resolution. She is training young journalists in this field as well as promoting a culture of peace.",
+   "quote": "Extremism can be positive if it has positive impacts. I am an extremist but not a violent one. I’m using peace to spread a culture of dialogue and positivity. We have to define ourselves.",
+   "region": "Beirut ",
+   "contact": "belal.alayoubi@gmail.com"
+ },
+ {
+   "id": 6,
+   "name": "Bilal Al Ayoubi",
+   "category": "Anti-Fanaticism",
+   "bio": "Bilal worked on two post conflict projects with The United Nations Resident Coordinator Office in the Beirut Southern Suburbs after the July 2006 war, and in Tripoli after 2007 Nahr el Bared camp clashes. He transitioned as a Senior Program Development Specialist, mainly working on youth engagement and responding to the Syrian refugee crisis and the burdens it created on host communities. Mr. Al Ayoubi is a partner and co-founder of SHIFT incubation center; an incubator for social enterprises and initiatives located at the previous fault lines between Jabal Mohsen and Qobbe in Tripoli. He is also a team member in the Forum for Cities in Transition since 2013, which is currently leading an effort to create a strategy for communal reconciliation in the city of Tripoli.",
+   "quote": "Learn about the other, and the only way to understand the dynamic...understand the other",
+   "region": "Tripoli and Akkar (nationwide in the future)",
+   "contact": ""
+ },
+ {
+   "id": 7,
+   "name": "Jean-Paul Chami",
+   "category": "Anti-Fanaticism and Anti-Racism",
+   "bio": "Jean-Paul Chami is a Lebanese consultant; trainer and facilitator specialized in peace building and conflict transformation. He has delivered more than 50 training workshops and lectures in Lebanon and in the Arab region. Currently he directs Peace Labs, a local Lebanese NGO, which he has founded back in 2011 that focuses on the peaceful transformation of community-based conflicts. It serves a number of communities in North Lebanon by providing them training, coaching, technical support, grants and in-kind contributions. At Peace Labs he works on a bottom-up approach to peace in Lebanon based on supporting existing peace mechanisms and conflict conciliators.",
+   "quote": "",
+   "region": "North Lebanon",
+   "contact": ""
+ },
+ {
+   "id": 8,
+   "name": "Zeina Daccache",
+   "category": "Anti-Fanaticism and Anti-Racism",
+   "bio": "She is the founder and Executive Director of Catharsis - Lebanese Center for Drama Therapy and works as a drama therapist, play director and documentary filmmaker in different settings. She believes in the liberating and healing powers of therapy through theater. She has been implementing Drama Therapy processes in Lebanon and the Middle East since 2006. She is recipient of many awards given for her distinguished contributions to the field of social initiatives and services.",
+   "quote": "I think that therapy through theater can have a healing and liberating power for everyone",
+   "region": "Wherever she is needed.",
+   "contact": "zeina@catharsislcdt.org"
+ },
+ {
+   "id": 9,
+   "name": "Lea Baroudi",
+   "category": "Anti-Fanaticism, Anti-Sectarianism and Anti-Sexism",
+   "bio": "A Lebanese activist working to foster cultural and religious pluralism against rising extremism through peace-building activities that focuses on art, culture and human rights. She is the co-founder and Director of MARCH, a Beirut based, civil society organization that seeks to strengthen civil rights, engender tolerance, foster diversity and promote equality in Lebanon. Ms. Baroudi specializes in inter-faith and sectarian mediation in addition to fighting for women’s rights.",
+   "quote": "\"They think this way because they are victims of their own circumstances” – on those who are violent or extremist.",
+   "region": "Tripoli",
+   "contact": "info@marchlebanon.org"
+ },
+ {
+   "id": 10,
+   "name": "Nermine Sibai",
+   "category": "Anti-Fanaticism",
+   "bio": "A human rights lawyer and activist, Nermine Sibai has worked on various cases across Lebanon, trying to change laws and mentalities in order to restructure Lebanon and reduce the structural extremism of our system.",
+   "quote": "Change takes time, change takes effort but you can pave the way. We've already come a long way. Every vote counts, every action counts, every step counts, and every idea counts",
+   "region": "Beirut and surrounding areas",
+   "contact": ""
+ },
+ {
+   "id": 11,
+   "name": "Maha Shuayb",
+   "category": "Anti-Fanaticism",
+   "bio": "Maha is the director of the Centre for Lebanese Studies. Maha’s research focuses on the sociology and politics of education. Her research areas include education and social cohesion, refugee education, citizenship education and history education.",
+   "quote": "",
+   "region": "Beirut",
+   "contact": "+961-1-786456. Ext. 1528 or info@lebanesestudies.com"
+ },
+ {
+   "id": 12,
+   "name": "George Azzi",
+   "category": "Anti-Racism",
+   "bio": "Georges Azzi, a co-founder of Helem and a former director of the organization. Also, the founder of The Arab Foundation for Freedom's and Equality. AFE’s goal is to support the movement for sexual rights and protections across the MENA region.",
+   "quote": "What keeps me motivated is seeing a stronger local LGBTQ community and the improvements that we have helped to achieve.",
+   "region": "Lebanon",
+   "contact": "(+961) 1 745092 or board@helem.net"
+ }
+]
