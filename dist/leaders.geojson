@@ -1,0 +1,191 @@
+﻿{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "category": "anti-fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.483619,
+          33.895373
+        ],
+        "type": "Point"
+      },
+      "id": "0b4c9eeefe0aebfbfa3bf25cc103e38b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "category": "anti-fanaticism",
+        "category2": "anti-racism",
+        "category3": " anti-sexism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.822276,
+          34.445166
+        ],
+        "type": "Point"
+      },
+      "id": "0e44c808d8cbc531dbf51e6152034a11"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "category": "anti-fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.48674,
+          33.895302
+        ],
+        "type": "Point"
+      },
+      "id": "3539e3edf6bc0ee6954588829885e3d2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "category": "anti-fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.822534,
+          34.445215
+        ],
+        "type": "Point"
+      },
+      "id": "48a459b38c91a3ac4be9f6b7837fff08"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "category": "anti-fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.490647,
+          33.873975
+        ],
+        "type": "Point"
+      },
+      "id": "59f34297c3625bcc2363a28a10f6a686"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "category": "anti-fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.478245,
+          33.896847
+        ],
+        "type": "Point"
+      },
+      "id": "60f61677fd753b63dcb6778bcf1ddb6c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "category": "anti-fanaticism",
+        "category2": "anti-racism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.62008,
+          33.983539
+        ],
+        "type": "Point"
+      },
+      "id": "6df258a212a8c5978111402fd30e5714"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "category": "anti-fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.478197,
+          33.895793
+        ],
+        "type": "Point"
+      },
+      "id": "72e16b65dce5f3c0ace9f0b90c37b447"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "category": "anti-fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.478167,
+          33.895621
+        ],
+        "type": "Point"
+      },
+      "id": "8785463b4eb91f9f93b2c571099a6ce3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "category": "anti-fanaticism",
+        "category2": "anti-racism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.530027,
+          33.864929
+        ],
+        "type": "Point"
+      },
+      "id": "910046da5b695639066708d49d65d9df"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "category": "anti-fanaticism",
+        "category2": "anti-sexism",
+        "category3": "anti-sectarianism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.508479,
+          33.888985
+        ],
+        "type": "Point"
+      },
+      "id": "cb801bba9307552018ea4e15d1f1087f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "category": "anti-racism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.484279,
+          33.894078
+        ],
+        "type": "Point"
+      },
+      "id": "f2cb2866c2e5e1e0cba822962e72dcf1"
+    }
+  ],
+  "type": "FeatureCollection"
+}

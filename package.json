@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "budo src/app.js --dir=src --open --live -- ",
-    "copy": "rm -rf dist && mkdir -p dist && cp src/index.html dist/ && cp -r src/assets dist/assets && cp src/CNAME dist/CNAME",
+    "copy": "rm -rf dist && mkdir -p dist && cp src/index.html dist/ && cp src/*.geojson dist/ && cp -r src/assets dist/assets && cp src/CNAME dist/CNAME",
     "build": "npm run copy && browserify src/app.js > dist/app.js",
     "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
