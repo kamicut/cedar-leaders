@@ -17077,7 +17077,7 @@ document.getElementById('map').appendChild(tree);
 },{"./list":42,"./map":43,"choo":8,"choo/html":7,"xhr":35}],41:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['\n     <li class="w-30 dib list v-top ma3 pa3 br3 bg-white ba b--black-10">\n       <div class="tc w-100 db">\n         <img src="/assets/images/', '.jpg" />\n         <h1 class="f4 ttu">', '</h1>\n         <h4 class="center mw3 bb bw1 b--black-10">\n       </div>\n     <p class="lh-copy"><strong>Category:</strong> ', '</p>\n     <p class="lh-copy i">"', '"</p>\n     <p class="lh-copy"><strong>Bio: </strong>', '</p>\n     <p class="lh-copy"><strong>Region of Influence: </strong> ', '</p>\n     </li>\n  '], ['\n     <li class="w-30 dib list v-top ma3 pa3 br3 bg-white ba b--black-10">\n       <div class="tc w-100 db">\n         <img src="/assets/images/', '.jpg" />\n         <h1 class="f4 ttu">', '</h1>\n         <h4 class="center mw3 bb bw1 b--black-10">\n       </div>\n     <p class="lh-copy"><strong>Category:</strong> ', '</p>\n     <p class="lh-copy i">"', '"</p>\n     <p class="lh-copy"><strong>Bio: </strong>', '</p>\n     <p class="lh-copy"><strong>Region of Influence: </strong> ', '</p>\n     </li>\n  ']);
+var _templateObject = _taggedTemplateLiteral(['\n     <li class="w-30 dib list v-top ma3 pa3 br3 bg-white ba b--black-10">\n       <div class="tc w-100 db">\n         <img src="/assets/images/', '.jpg" />\n         <h1 class="f4 ttu">', '</h1>\n         <h4 class="center mw3 bb bw1 b--black-10">\n       </div>\n     <p class="lh-copy"><strong>Category:</strong> ', '</p>\n     <p class="lh-copy i">', '</p>\n     <p class="lh-copy"><strong>Bio: </strong>', '</p>\n     <p class="lh-copy"><strong>Region of Influence: </strong> ', '</p>\n     </li>\n  '], ['\n     <li class="w-30 dib list v-top ma3 pa3 br3 bg-white ba b--black-10">\n       <div class="tc w-100 db">\n         <img src="/assets/images/', '.jpg" />\n         <h1 class="f4 ttu">', '</h1>\n         <h4 class="center mw3 bb bw1 b--black-10">\n       </div>\n     <p class="lh-copy"><strong>Category:</strong> ', '</p>\n     <p class="lh-copy i">', '</p>\n     <p class="lh-copy"><strong>Bio: </strong>', '</p>\n     <p class="lh-copy"><strong>Region of Influence: </strong> ', '</p>\n     </li>\n  ']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -17085,8 +17085,11 @@ var choo = require('choo');
 var html = require('choo/html');
 
 module.exports = function (cardData) {
-  console.log(cardData);
-  return html(_templateObject, cardData.id, cardData.name, cardData.category, cardData.quote, cardData.bio, cardData.region);
+  var quote = null;
+  if (cardData.quote.length > 0) {
+    quote = '"' + cardData.quote + '"';
+  }
+  return html(_templateObject, cardData.id, cardData.name, cardData.category, quote, cardData.bio, cardData.region);
 };
 
 },{"choo":8,"choo/html":7}],42:[function(require,module,exports){
