@@ -9,9 +9,13 @@
     <title>Cedar Leaders</title>
     <link rel="author" type="text/plain" href="humans.txt">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.5/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css">
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
   </head>
 
   <body class="w-100 avenir black-70">
+
       <header class="w-100 ph5-ns bg-white pa3">
         <div class="dt">
 					<img class="v-mid dtc w2 h2" src="assets/graphics/logo.png" alt="logo"/>
@@ -33,6 +37,7 @@
 						<div>
 							<button>Map</button>
 							<button>List</button>
+              <div id="map"></div>
 						</div>
 					</div>
         </section>
