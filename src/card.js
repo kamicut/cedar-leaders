@@ -7,7 +7,7 @@ module.exports = function (cardData) {
     quote = `"${cardData.quote}"`;
   }
   return html`
-     <li class="w-30 dib list v-top ma3 pa3 br3 bg-white ba b--black-10">
+     <li class="w-30-ns w-80-m w-100 dib list v-top ma2 pa3 br3 bg-white ba b--black-10">
        <div class="tc w-100 db">
          <img src="/assets/images/${cardData.id}.jpg" />
          <h1 class="f4 ttu">${cardData.name}</h1>
