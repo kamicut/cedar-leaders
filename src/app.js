@@ -2,8 +2,6 @@ const choo = require('choo');
 const html = require('choo/html');
 const xhr = require('xhr');
 
-const Map = require('./map')();
-const List = require('./list')
 
 const app = choo();
 
@@ -22,6 +20,7 @@ app.model({
       }, function (err, resp, body) {
         if (err) {
           throw new Error(err);
+    
         }
         if (resp.statusCode >= 200 && resp.statusCode < 400) {
           send('receiveBios', JSON.parse(resp.body), done);
@@ -37,14 +36,21 @@ app.model({
     },
     receiveBios: (data, state) => {
       return { bios: data }
+    },
+    featureClick: (data, state) => {
+      console.log('feature clicked', data);
     }
   }
 });
 
 const View = (state, prev, send) => {
+  const Map = require('./map')(send);
+  const List = require('./list')
+
   return html`
   <main onload=${() => send('getBios')}>
     ${List(state.bios)}
+    ${Map(state.coords, state.bios)}
   </main>
   `
 }

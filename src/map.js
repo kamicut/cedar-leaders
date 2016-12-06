@@ -4,23 +4,39 @@ const L = require('leaflet');
 const Clusters = require('leaflet.markercluster');
 const xhr = require('xhr');
 
-module.exports = () => {
+module.exports = (send) => {
 
   let map;
   let currentCoords;
   let markerLayer;
   let defaultZoom = 8;
+  let bios;
+  let markers = {};
+
+  function bindPopups(markers, bios) {
+    if (!bios || !markers) return;
+    Object.keys(markers).forEach((markerId) => {
+      for (let i=0; i < bios.length; i++) {
+        let id = bios[i].id;
+        if (markerId == id) {
+          markers[markerId].bindPopup(`<strong>${bios[i].name}</strong>`)
+        }
+      }
+    });
+  }
 
   return widget({
-    onupdate: function (el, newCoords) {
+    onupdate: function (el, newCoords, bios) {
+      bios = bios;
       if (newCoords && (!currentCoords || !coordsMatch(newCoords, currentCoords))) {
         currentCoords = newCoords;
         if (map) map.setView(newCoords);
       }
     },
 
-    render: function (coords) {
+    render: function (coords, bios) {
       currentCoords = coords;
+      bios = bios;
       return html`<div style="height: 500px"></div>`
     },
 
@@ -47,11 +63,29 @@ module.exports = () => {
           var geojsonLayer = L.geoJson(markers, {
             pointToLayer: function (feature, latlng) {
               var marker = new L.CircleMarker(latlng, {radius: 10});
-              marker.on({
-                click: function (e) {
-                  console.log('clicked: ', feature.properties)
+              // marker.on({
+              //   click: function (e) {
+              //     send('featureClick', feature.properties)
+              //   }
+              // })
+              markers[feature.properties.id] = marker;
+              xhr({
+                uri: 'leaders-bio.geojson',
+                headers: {
+                  'Content-Type': 'application/json'
                 }
-              })
+              }, function (err, resp, body) {
+                if (err) {
+                  throw new Error(err);
+
+                }
+                if (resp.statusCode >= 200 && resp.statusCode < 400) {
+                  bindPopups(markers, JSON.parse(resp.body));
+                } else {
+                  console.error(resp)
+                }
+              });
+
               return marker;
             },
 

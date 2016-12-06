@@ -35,6 +35,21 @@
     {
       "type": "Feature",
       "properties": {
+        "Id": 14,
+        "Category": "Anti-Fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.502984,
+          33.879192
+        ],
+        "type": "Point"
+      },
+      "id": "29ff4241da4535d445a922b061b6080f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 5,
         "category": "anti-fanaticism"
       },
@@ -170,6 +185,21 @@
         "type": "Point"
       },
       "id": "cb801bba9307552018ea4e15d1f1087f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 13,
+        "Category": "Anti-Fanaticism"
+      },
+      "geometry": {
+        "coordinates": [
+          35.490543,
+          33.875803
+        ],
+        "type": "Point"
+      },
+      "id": "f24ddd79bd6b9f4d08e44be74c4e7704"
     },
     {
       "type": "Feature",
