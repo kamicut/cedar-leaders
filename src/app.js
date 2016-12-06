@@ -49,8 +49,8 @@ const View = (state, prev, send) => {
 
   return html`
   <main onload=${() => send('getBios')}>
-    ${List(state.bios)}
     ${Map(state.coords, state.bios)}
+    ${List(state.bios)}
   </main>
   `
 }
