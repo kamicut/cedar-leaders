@@ -17014,16 +17014,13 @@ module.exports = [
 },{}],40:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['\n  <main onload=', '>\n    ', '\n  </main>\n  '], ['\n  <main onload=', '>\n    ', '\n  </main>\n  ']);
+var _templateObject = _taggedTemplateLiteral(['\n  <main onload=', '>\n    ', '\n    ', '\n  </main>\n  '], ['\n  <main onload=', '>\n    ', '\n    ', '\n  </main>\n  ']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var choo = require('choo');
 var html = require('choo/html');
 var xhr = require('xhr');
-
-var Map = require('./map')();
-var List = require('./list');
 
 var app = choo();
 
@@ -17057,14 +17054,20 @@ app.model({
     },
     receiveBios: function receiveBios(data, state) {
       return { bios: data };
+    },
+    featureClick: function featureClick(data, state) {
+      console.log('feature clicked', data);
     }
   }
 });
 
 var View = function View(state, prev, send) {
+  var Map = require('./map')(send);
+  var List = require('./list');
+
   return html(_templateObject, function () {
     return send('getBios');
-  }, List(state.bios));
+  }, List(state.bios), Map(state.coords, state.bios));
 };
 
 app.router(function (route) {
@@ -17133,23 +17136,39 @@ var L = require('leaflet');
 var Clusters = require('leaflet.markercluster');
 var xhr = require('xhr');
 
-module.exports = function () {
+module.exports = function (send) {
 
   var map = void 0;
   var currentCoords = void 0;
   var markerLayer = void 0;
   var defaultZoom = 8;
+  var bios = void 0;
+  var markers = {};
+
+  function bindPopups(markers, bios) {
+    if (!bios || !markers) return;
+    Object.keys(markers).forEach(function (markerId) {
+      for (var i = 0; i < bios.length; i++) {
+        var id = bios[i].id;
+        if (markerId == id) {
+          markers[markerId].bindPopup('<strong>' + bios[i].name + '</strong>');
+        }
+      }
+    });
+  }
 
   return widget({
-    onupdate: function onupdate(el, newCoords) {
+    onupdate: function onupdate(el, newCoords, bios) {
+      bios = bios;
       if (newCoords && (!currentCoords || !coordsMatch(newCoords, currentCoords))) {
         currentCoords = newCoords;
         if (map) map.setView(newCoords);
       }
     },
 
-    render: function render(coords) {
+    render: function render(coords, bios) {
       currentCoords = coords;
+      bios = bios;
       return html(_templateObject);
     },
 
@@ -17171,25 +17190,47 @@ module.exports = function () {
           throw new Error(err);
         }
         if (resp.statusCode >= 200 && resp.statusCode < 400) {
-          var markers = JSON.parse(body);
-          markerLayer = L.markerClusterGroup();
-          var geojsonLayer = L.geoJson(markers, {
-            pointToLayer: function pointToLayer(feature, latlng) {
-              var marker = new L.CircleMarker(latlng, { radius: 10 });
-              marker.on({
-                click: function click(e) {
-                  console.log('clicked: ', feature.properties);
-                }
-              });
-              return marker;
-            },
+          var geojsonLayer;
 
-            onEachFeature: function onEachFeature(feature, layer) {
-              layer.addTo(markerLayer);
-            }
-          });
-          markerLayer.addTo(map);
-          map.fitBounds(markerLayer.getBounds());
+          (function () {
+            var markers = JSON.parse(body);
+            markerLayer = L.markerClusterGroup();
+            geojsonLayer = L.geoJson(markers, {
+              pointToLayer: function pointToLayer(feature, latlng) {
+                var marker = new L.CircleMarker(latlng, { radius: 10 });
+                // marker.on({
+                //   click: function (e) {
+                //     send('featureClick', feature.properties)
+                //   }
+                // })
+                markers[feature.properties.id] = marker;
+                xhr({
+                  uri: 'leaders-bio.geojson',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  }
+                }, function (err, resp, body) {
+                  if (err) {
+                    throw new Error(err);
+                  }
+                  if (resp.statusCode >= 200 && resp.statusCode < 400) {
+                    bindPopups(markers, JSON.parse(resp.body));
+                  } else {
+                    console.error(resp);
+                  }
+                });
+
+                return marker;
+              },
+
+              onEachFeature: function onEachFeature(feature, layer) {
+                layer.addTo(markerLayer);
+              }
+            });
+
+            markerLayer.addTo(map);
+            map.fitBounds(markerLayer.getBounds());
+          })();
         } else {
           console.log(resp);
         }
