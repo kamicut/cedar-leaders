@@ -17067,7 +17067,7 @@ var View = function View(state, prev, send) {
 
   return html(_templateObject, function () {
     return send('getBios');
-  }, List(state.bios), Map(state.coords, state.bios));
+  }, Map(state.coords, state.bios), List(state.bios));
 };
 
 app.router(function (route) {
