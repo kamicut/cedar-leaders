@@ -35,8 +35,8 @@
     {
       "type": "Feature",
       "properties": {
-        "Id": 14,
-        "Category": "Anti-Fanaticism"
+        "id": 14,
+        "category": "Anti-Fanaticism"
       },
       "geometry": {
         "coordinates": [
@@ -189,8 +189,8 @@
     {
       "type": "Feature",
       "properties": {
-        "ID": 13,
-        "Category": "Anti-Fanaticism"
+        "id": 13,
+        "category": "Anti-Fanaticism"
       },
       "geometry": {
         "coordinates": [
